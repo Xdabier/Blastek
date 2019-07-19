@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-buttons>
+<!--            <ion-menu-button></ion-menu-button>-->
+        </ion-buttons>
+        <ion-title>New movies</ion-title>
+        <ion-buttons>
+            <ion-button *ngIf="user && user.isChief" routerLink="/cin_chief_home">Cin chief</ion-button>
+            <ion-button *ngIf="user && user.isAdmin"  routerLink="/admin_home">Admin</ion-button>
+            <ion-button *ngIf="loggedInUser" (click)="logout()">Logout</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-searchbar color="transparent" placeholder="Search"></ion-searchbar>
+    <div *ngIf="movies && movies.length > 0">
+        <ion-slides pager="true" [options]="slideOpts">
+            <ion-slide *ngFor="let mv of movies.slice(0, 5)" style="background-image: url(../../assets/slides_background/avengers2.jpg)">
+                <img style="width:50%;" src="{{mv && mv.poster ? mv.poster : '../../assets/thumb.png'}}" alt="{{mv.name}}">
+            </ion-slide>
+        </ion-slides>
+    </div>
+    <ion-grid *ngIf="movies && movies.length > 0">
+        <ion-row>
+            <ion-col *ngFor="let mv of movies" size="4">
+                <img [routerLink]="'/movie_details/' + mv.id" src="{{mv && mv.poster ? mv.poster : '../../assets/thumb.png'}}">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+

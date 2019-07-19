@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons>
+      <ion-buttons>
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        Cin chief halls list
+      </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-card *ngFor="let hall of hallsList" routerLink="/edit_hall/{{hall.id}}">
+    <ion-card-header>
+      {{ hall.name }}
+    </ion-card-header>
+    <ion-card-content>
+      Address: {{ hall.address }}
+      Phone: {{ hall.phone }}
+      Seats: {{ hall.seats }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

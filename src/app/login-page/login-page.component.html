@@ -1,0 +1,39 @@
+<ion-content fullscreen padding>
+
+    <img style="width:50%" class="effects" src='../../assets/img/logo3.png'>
+
+    <ion-item color="transparent">
+        <ion-input placeholder="E-mail" type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item color="transparent">
+        <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
+        <br>
+    </ion-item>
+    <ion-row center>
+        <ion-col text-center>
+            <ion-button shape="round" color="dark" (click)="login()">Login</ion-button>
+        </ion-col>
+    </ion-row>
+    <ion-row center>
+        <ion-col text-center>Don't have an account? <a routerLink="/signup">Sign up</a></ion-col>
+    </ion-row>
+    <ion-row center>
+        <ion-col text-center>
+            <ion-button shape="round" color="primary">
+                <ion-icon name="logo-facebook"></ion-icon>
+                Continue with
+            </ion-button>
+            <br>
+            <ion-button shape="round" color="danger">
+                <ion-icon name="logo-googleplus"></ion-icon>
+                Continue with
+            </ion-button>
+        </ion-col>
+    </ion-row>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button routerLink="/" color="danger">
+            <ion-icon name="arrow-dropright"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

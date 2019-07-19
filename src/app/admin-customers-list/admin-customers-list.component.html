@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-buttons>
+            <ion-buttons>
+                <ion-back-button defaultHref="/"></ion-back-button>
+            </ion-buttons>
+            <ion-title>
+                Customers list
+            </ion-title>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+
+    <ion-card *ngFor="let user of usersList">
+        <ion-card-header>
+            {{ user.name + ' ' + user.lastName}}
+        </ion-card-header>
+        <ion-card-content>
+            E-mail: {{ user.email }}
+        </ion-card-content>
+        <ion-buttons>
+            <ion-button color="danger" (click)="presentAlertConfirm(user.id)">Delete</ion-button>
+        </ion-buttons>
+    </ion-card>
+</ion-content>

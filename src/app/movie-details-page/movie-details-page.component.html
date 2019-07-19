@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons>
+      <ion-buttons>
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        {{movieDetails && movieDetails.name ? movieDetails.name : 'Movie details loading...'}}
+      </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="movieDetails">
+  <ion-title>Description</ion-title>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="5">
+        <img src='../../assets/thumb.png'>
+      </ion-col>
+      <ion-col>
+        <p>
+          {{movieDetails && movieDetails.description ? movieDetails.description : 'loading...'}}
+        </p>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <ion-title>Trailer</ion-title>
+  <iframe *ngIf="url"  width="95%" height="30%" [src]="url" frameborder="0"
+          allowfullscreen></iframe>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-button expand="block" [routerLink]="'/assigned_halls_movie/' + movieId">Get your ticket!</ion-button>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons>
+      <ion-buttons>
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        Cin chief movies
+      </ion-title>
+      <ion-buttons>
+        <ion-button routerLink="/cin_chief_create_movie">add movie</ion-button>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-card *ngFor="let movie of moviesList" routerLink="/cin_chief_edit_movie/{{movie.id}}">
+    <ion-card-header>
+      {{ movie.name }}
+    </ion-card-header>
+    <ion-card-content>
+      Description: {{ movie.description }}
+      <br>
+      Trailer link: {{ movie.trailerLink }}
+      <br>
+      Show time: {{ movie.movieDateTime | date: 'short'}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

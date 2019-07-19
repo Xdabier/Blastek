@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons>
+      <ion-buttons>
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        Create movie
+      </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-item>
+    <ion-label position="stacked">Movie Name</ion-label>
+    <ion-input
+            [(ngModel)]="name"
+            type="text"
+            placeholder="What's the movie's name?"
+    >
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Description</ion-label>
+    <ion-textarea
+            [(ngModel)]="description"
+            type="text"
+            placeholder="What's the movie's description ?"
+    >
+    </ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Trailer</ion-label>
+    <ion-textarea
+            [(ngModel)]="trailerLink"
+            type="text"
+            placeholder="What's the movie's trailer link ?"
+    >
+    </ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Show time</ion-label>
+    <ion-datetime displayFormat="D MMM YYYY H:mm" min="2019" max="2025" [(ngModel)]="movieDateTime"></ion-datetime>
+  </ion-item>
+
+
+  <ion-button
+          expand="block"
+          (click)="createMovie()"
+  >
+    Create movie
+  </ion-button>
+</ion-content>

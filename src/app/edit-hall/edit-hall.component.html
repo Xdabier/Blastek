@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons>
+      <ion-buttons>
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title>
+        Edit cinema hall
+      </ion-title>
+    </ion-buttons>
+    <ion-buttons *ngIf="user && user.isAdmin">
+
+      <ion-button [routerLink]="'/assign_chiefs/' + hallId">Assign cin chief</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <ion-item>
+    <ion-label position="stacked">Cinema hall Name</ion-label>
+    <ion-input
+            [(ngModel)]="name"
+            type="text"
+            placeholder="What's the halls's name?"
+    >
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Address</ion-label>
+    <ion-input
+            [(ngModel)]="address"
+            type="text"
+            placeholder="Where's the hall located ?"
+    >
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Phone</ion-label>
+    <ion-input
+            [(ngModel)]="phone"
+            type="number"
+            maxlength="8"
+            placeholder="Whats's the halls phone? "
+    >
+    </ion-input>
+  </ion-item>
+
+  <ion-button
+          expand="block"
+          (click)="updateHall()"
+  >
+    Update cinema hall
+  </ion-button>
+</ion-content>

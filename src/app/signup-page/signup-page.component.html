@@ -1,0 +1,25 @@
+<ion-content>
+    <form color="transparent">
+        <ion-item color="transparent">
+            <ion-label position="floating">Name :</ion-label>
+            <ion-input type="text" [(ngModel)]="creeds.name" name="name" required></ion-input>
+        </ion-item>
+        <ion-item color="transparent">
+            <ion-label position="floating">Last Name :</ion-label>
+            <ion-input type="text" [(ngModel)]="creeds.lastName" name="lastname" required></ion-input>
+        </ion-item>
+        <ion-item color="transparent">
+            <ion-label position="floating">E-mail :</ion-label>
+            <ion-input type="email" [(ngModel)]="creeds.email" name="email" required></ion-input>
+        </ion-item>
+        <ion-item color="transparent">
+            <ion-label position="floating">Password :</ion-label>
+            <ion-input type="password" [(ngModel)]="creeds.password" name="password" required></ion-input>
+        </ion-item>
+        <ion-item color="transparent">
+            <ion-label position="floating">Confirm password :</ion-label>
+            <ion-input type="password" [(ngModel)]="creeds.password2" name="cpassword" required></ion-input>
+        </ion-item>
+        <ion-button color="primary" expand="block" (click)="signupUser()">Sign Up</ion-button>
+    </form>
+</ion-content>

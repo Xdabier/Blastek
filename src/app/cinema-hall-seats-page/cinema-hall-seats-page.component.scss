@@ -1,0 +1,187 @@
+ion-content{
+  --background: url('../../assets/background/login.jpg');
+
+}
+
+
+ion-card{
+  background: rgba(255, 255, 255, 0.651)!important;
+  margin-top: 10%!important;
+  height: 80vh!important;
+}
+.cinema-seats {
+  display: flex;
+  size: 40%;
+  .seat {
+    cursor: pointer;
+
+    &:hover:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 7px;
+    }
+
+    .active:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 7px;
+    }
+  }
+}
+
+
+// Left Seats
+.left {
+  margin-top: 15%;
+  margin-left: 17%;
+
+  .cinema-row {
+    transform: skew(0deg);
+    margin: 0 4px;
+  }
+
+  .seat {
+    width: 25px;
+    height: 40px;
+    border-radius: 7px;
+    background: linear-gradient(to top, #761818, #761818, #761818, #761818, #761818, #B54041,  #F3686A);
+    margin-bottom: 15px;
+    transform: skew(0deg);
+    margin-top: -32px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
+  }
+
+  .row-2 {
+    transform: skew(-0deg);
+
+    .seat {
+      transform: skew(0deg);
+    }
+  }
+
+  .row-3 {
+    transform: skew(-0deg);
+
+    .seat {
+      transform: skew(0deg);
+    }
+  }
+
+  .row-4 {
+    transform: skew(-0deg);
+
+    .seat {
+      transform: skew(0deg);
+    }
+  }
+
+  .row-5 {
+    transform: skew(-0deg);
+
+    .seat {
+      transform: skew(0deg);
+    }
+  }
+  .flexBoxSeats {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .row-6 {
+    transform: skew(-0deg);
+
+    .seat {
+      transform: skew(0deg);
+    }
+  }
+
+  .row-7 {
+    transform: skew(-0deg);
+
+    .seat {
+      transform: skew(0deg);
+    }
+  }
+}
+
+
+
+
+
+// right Seats
+.right {
+  margin-left: 17%;
+
+  .cinema-row {
+    transform: skew(0deg);
+    margin: 0 4px;
+  }
+
+  .seat {
+    width: 25px;
+    height: 40px;
+    border-radius: 7px;
+    background: linear-gradient(to top, #761818, #761818, #761818, #761818, #761818, #B54041,  #F3686A);
+    margin-bottom: 15px;
+    transform: skew(-0deg);
+    margin-top: -32px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
+  }
+
+  .row-2 {
+    transform: skew(0deg);
+
+    .seat {
+      transform: skew(-0deg);
+    }
+  }
+
+  .row-3 {
+    transform: skew(0deg);
+
+    .seat {
+      transform: skew(-0deg);
+    }
+  }
+
+  .row-4 {
+    transform: skew(0deg);
+
+    .seat {
+      transform: skew(-0deg);
+    }
+  }
+
+  .row-5 {
+    transform: skew(0deg);
+
+    .seat {
+      transform: skew(-0deg);
+    }
+  }
+
+  .row-6 {
+    transform: skew(0deg);
+
+    .seat {
+      transform: skew(-0deg);
+    }
+  }
+
+  .row-7 {
+    transform: skew(0deg);
+
+    .seat {
+      transform: skew(-0deg);
+    }
+  }
+}

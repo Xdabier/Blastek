@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar color="tertiary">
+        <ion-buttons>
+            <ion-buttons>
+                <ion-back-button defaultHref="/"></ion-back-button>
+            </ion-buttons>
+            <ion-title>
+                Assign chiefs to hall
+            </ion-title>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+
+    <ion-card *ngFor="let user of chiefsList">
+        <ion-card-header>
+            {{ user.name + ' ' + user.lastName}}
+            <ion-buttons>
+                <ion-button disabled>{{user.assigned ? 'Assigned!' : 'Not assigned yet'}}</ion-button>
+            </ion-buttons>
+        </ion-card-header>
+        <ion-card-content>
+            E-mail: {{ user.email }}
+            <br>
+
+            <ion-buttons>
+                <ion-button color="danger"
+                            (click)="assignToHall(user.id, !user.assigned)">{{!user.assigned ? 'Assign' : 'Un-assign'}}</ion-button>
+            </ion-buttons>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
